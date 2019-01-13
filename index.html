@@ -125,21 +125,21 @@
   </div>
 
   <script>
-    const panels = document.querySelectorAll(".panel")
+    const panels = document.querySelectorAll('.panel')
     panels.forEach(panel => {
-      panel.addEventListener("click", togglePanel)
-      panel.addEventListener("transitionend", toggleText)
+      panel.addEventListener('click', togglePanel)
+      panel.addEventListener('transitionend', toggleText)
     })
 
     function togglePanel (event) {
       let el = event.target
-      el.classList.toggle("open")
+      el.classList.toggle('open')
     }
 
     function toggleText (event) {
       console.log(event.propertyName)
-      if (event.propertyName === 'flex-grow') {
-        event.target.classList.toggle("open-active")
+      if (event.propertyName == 'flex-grow') {
+        event.target.classList.toggle('open-active')
       }
     }
 
